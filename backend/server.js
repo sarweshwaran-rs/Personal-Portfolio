@@ -19,5 +19,5 @@ app.use('/api/contact', contactRoute);
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, ()=>{
-    console.log(`App Runnning in port ${PORT}\n Server Link: http://localhost:${PORT}`)
+    console.log(`App Runnning in port ${PORT}\nServer Link: http://localhost:${PORT}`)
 });
