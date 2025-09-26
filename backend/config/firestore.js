@@ -1,6 +1,9 @@
 var admin = require("firebase-admin");
+var dotenv = require('dotenv');
 
-var serviceAccount = require("../portfolio-091003-service-account.json");
+dotenv.config();
+
+var serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIAL
 
 admin.initializeApp({
     credential:admin.credential.cert(serviceAccount)
