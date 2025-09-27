@@ -13,13 +13,12 @@ const transporter = mailer.createTransport({
 
 //console.log(`Transporter: ${transporter}`);
 
-async function sendMail(to, subject, text, html) {
+async function sendMail(to, subject, html) {
     await transporter.sendMail({
         from: `"Portfolio Contact" <${process.env.GOOGLE_GMAIL_USER}>`,
         to,
         subject,
-        text, 
-        html,
+        html
     });
 };
 
