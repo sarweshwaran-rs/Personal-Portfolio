@@ -42,11 +42,11 @@ exports.submitContact = async (req, res) => {
                             &copy; 2025 Sarweshwaran R S
                             <a href="https://www.linkedin.com/in/sarweshwaranrs" target="_blank"
                                 style="text-decoration:none; color:inherit; margin-left:8px;">
-                                <img src="https://raw.githubusercontent.com/sarweshwaranrs-dev/Personal-Portfolio/refs/heads/development/backend/Logo/linkedin.svg" height="20" width="20" style="vertical-align:middle;" />
+                                <img src="https://raw.githubusercontent.com/sarweshwaranrs-dev/Personal-Portfolio/development/backend/Logo/linkedin.svg" height="20" width="20" style="vertical-align:middle;" />
                             </a>
                             <a href="https://www.github.com/sarweshwaran-rs" target="_blank"
                                 style="text-decoration:none; color:inherit; margin-left:8px;">
-                                <img src="https://raw.githubusercontent.com/sarweshwaranrs-dev/Personal-Portfolio/refs/heads/development/backend/Logo/github.svg" height="20" width="20" style="vertical-align:middle;" />
+                                <img src="https://raw.githubusercontent.com/sarweshwaranrs-dev/Personal-Portfolio/development/backend/Logo/github.svg" height="20" width="20" style="vertical-align:middle;" />
                             </a>
                         </div>
                     </div>
