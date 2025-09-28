@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-app.use(cors());
+app.use(cors('http://localhost:4200'));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
