@@ -1,0 +1,16 @@
+.btn-resume {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  color: #007bff;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+  background: #007bff;
+  color: white;
+}
