@@ -1,4 +1,3 @@
-
 <iframe 
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.208474378026!2d79.12438387454543!3d12.894312216569109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3923fd81948d%3A0xcdb949d6aad84cfa!2sBig%20Allahpuram%20Main%20Rd%2C%20Vellore%2C%20Tamil%20Nadu%20632002!5e0!3m2!1sen!2sin!4v1759060860286!5m2!1sen!2sin" 
   width="400" height="300" style="border:0;" 
@@ -7,24 +6,30 @@
   referrerpolicy="no-referrer-when-downgrade"
 ></iframe>
 
-<form [formGroup]="portfolioForm" (ngSubmit)="onSubmit()">
+<form id="contactFrom" [formGroup]="portfolioForm" (ngSubmit)="onSubmit()">
   <label for="name">Name</label>
   <input type="text" formControlName="personname" name="personname" />
-  <div *ngIf="portfolioForm.controls.personname?.invalid && portfolioForm.controls.personname?.touched">
-    <small>Name is required</small>
-  </div>
+  @if(portfolioForm.controls.personname.invalid && portfolioForm.controls.personname.touched){
+    <div>
+      <small>Name is required</small>
+    </div>
+  }
 
   <label for="email">Email</label>
   <input type="email" formControlName="email" name="email" />
-  <div *ngIf="portfolioForm.controls.email?.invalid && portfolioForm.controls.email?.touched">
-    <small>Enter a valid email</small>
-  </div>
+  @if(portfolioForm.controls.email.invalid && portfolioForm.controls.email.touched){
+    <div>
+      <small>Enter a valid email</small>
+    </div>
+  }
 
   <label for="linkedinurl">LinkedIn Url</label>
   <input type="text" formControlName="linkedinurl" name="linkedinurl" />
-  <div *ngIf="portfolioForm.controls.linkedinurl?.invalid && portfolioForm.controls.linkedinurl?.touched">
-    <small>Enter a valid LinkedIn profile URL</small>
-  </div>
+  @if(portfolioForm.controls.linkedinurl.invalid && portfolioForm.controls.linkedinurl.touched){
+    <div>
+      <small>Enter a valid LinkedIn profile URL</small>
+    </div>
+  }
 
   <button type="submit" [disabled]="portfolioForm.invalid">Submit Details</button>
 </form>
