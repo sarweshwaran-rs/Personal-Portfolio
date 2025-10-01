@@ -1,3 +1,4 @@
+const os = require('os');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -13,7 +14,8 @@ const app = express();
 
 const allowedOrigins = [
     'http://localhost:4200',
-    'http://192.168.1.19:4200'
+    'http://192.168.1.19:4200',
+    'http://192.168.0.3:4200'
 ];
 
 app.use(cors({
@@ -47,8 +49,17 @@ app.get("/api/github/pinned", async (req, res) => {
 });
 
 app.listen(PORT, "0.0.0.0", () => {
+    const networkInterface = os.networkInterfaces();
+    let networkAddress='localhost';
+    for(const iface of Object.values(networkInterface)) {
+        for(const alias of iface) {
+            if(alias.family ==='IPv4' && !alias.internal) {
+                networkAddress = alias.address;
+            }
+        }
+    }
     console.log(`App Runnning on:
         -> Local: http://localhost:${PORT}
-        -> Network: http://192.168.1.19:${PORT}`
+        -> Network: http://${networkAddress}:${PORT}`
     );
 });
