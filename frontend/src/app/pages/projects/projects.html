@@ -1,0 +1,12 @@
+<section class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+        @if (projects$ | async; as projects) {
+            @for (pro of projects; track pro.name) {
+                <app-project-card [project]="pro"></app-project-card>
+            }
+        } @else {
+            <p>Loading projects...</p>
+        }
+    </div>
+</section>
