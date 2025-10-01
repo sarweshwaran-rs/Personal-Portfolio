@@ -15,10 +15,13 @@ export interface ContactForm {
 
 export class Api {
   private base = `${environment.baseApi}/contact/submit`;
-
+  private apiUrl = `${environment.baseApi}/github/pinned`;
   constructor(private http: HttpClient) { }
 
   submitContactForm(contactData: ContactForm): Observable<any> {
     return this.http.post<any>(this.base, contactData);
+  }
+  getProjects(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);
   }
 }
