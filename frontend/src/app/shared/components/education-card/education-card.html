@@ -1,0 +1,13 @@
+@if(education)
+{
+    <div class="card">
+        <img [src]="education.logo" alt="{{education?.name}} logo" width="50" height="50" />
+        <div class="card-body">
+            <h3>{{education.name}}</h3>
+            <p><strong>Class:</strong>{{education?.class}}</p>
+            <p><strong>Grade:</strong>{{education?.grade}}</p>
+            <p><strong>Duration:</strong>{{education?.duration}}</p>
+            <p><strong>Status:</strong>{{education?.status}}</p>
+        </div>
+    </div>
+}

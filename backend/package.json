@@ -8,13 +8,17 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
+    "@apollo/client": "^4.0.7",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
+    "cross-fetch": "^4.1.0",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "firebase": "^12.3.0",
     "firebase-admin": "^13.5.0",
-    "nodemailer": "^7.0.6"
+    "graphql": "^16.11.0",
+    "nodemailer": "^7.0.6",
+    "rxjs": "^7.8.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"

@@ -1,0 +1,65 @@
+<section class="publications-section">
+    <h2> Publications</h2>
+
+    <div class="publication-cards">
+        @for(pub of publications; track pub.title) 
+        {
+            <mat-card class="pub-card">
+                <mat-card-header>
+                    <mat-card-header>{{ pub.title }}</mat-card-header>
+                    <mat-card-subtitle>{{ pub.type}} . {{ pub.role }} . {{ pub.year }}</mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-card-content>
+                    <p><strong>Book:</strong>{{pub.book}} (Chapter {{pub.chapter}})</p>
+                    <p><strong>Publisher:</strong>{{pub.publisher}}</p>
+                    <p>{{pub.description}}</p>
+
+                    @if(pub.keyAchievements) {
+                        <h4>Key Achievements</h4>
+                        <ul>
+                            @for (achievement of pub.keyAchievements; track achievement) {
+                                <li>{{ achievement }}</li>
+                            }
+                        </ul>
+                    }
+
+                    @if(pub.technologies.length > 0) {
+                        <h4>Technologies</h4>
+                        <mat-chip-listbox>
+                            @for(tech of pub.technologies; track tech) {
+                                <mat-chip option selected color="primary">{{ tech }}</mat-chip>
+                            }
+                        </mat-chip-listbox>
+                    }
+                    <p><strong>Dataset:</strong>{{ pub.dataset }}</p>
+                    <p><strong>Results:</strong>{{ pub.results }}</p>
+                </mat-card-content>
+
+                <mat-card-actions>
+                    <a mat-button color="primary" [href]="pub.url" target="_blank">View DOI</a>
+                    <a mat-button color="accent" [href]="pub.accessbook" target="_blank">Read Chapter</a>
+                    <a mat-button [href]="pub.orcidId" target="_blank">ORCID</a>
+                </mat-card-actions>
+            </mat-card>
+        }
+    </div>
+
+    <h2>Profiles</h2>
+    <div class="profile-cards">
+        @for(profile of publicationProfiles; track profile.name) {
+            <mat-card class="profile-card">
+                <mat-card-header>
+                    <img [src]="profile.svg" alt="{{profile.name}} logo" class="profile-logo" width="32" height="32"/>
+                    <mat-card-title>{{profile.name}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{profile.description}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a mat-button color="primary" [href]="profile.profile" target="_blank">Visit</a>
+                </mat-card-actions>
+            </mat-card>
+        }
+    </div>
+</section>

@@ -42,11 +42,11 @@ exports.submitContact = async (req, res) => {
                             &copy; 2025 Sarweshwaran R S
                             <a href="https://www.linkedin.com/in/sarweshwaranrs" target="_blank"
                                 style="text-decoration:none; color:inherit; margin-left:8px;">
-                                <img src="https://raw.githubusercontent.com/sarweshwaranrs-dev/Personal-Portfolio/development/backend/Logo/linkedin.svg" height="20" width="20" style="vertical-align:middle;" />
+                                <img src="https://raw.githubusercontent.com/sarweshwaranrs-dev/Personal-Portfolio/development/frontend/public/assets/images/linkedin.svg" height="20" width="20" style="vertical-align:middle;" />
                             </a>
                             <a href="https://www.github.com/sarweshwaran-rs" target="_blank"
                                 style="text-decoration:none; color:inherit; margin-left:8px;">
-                                <img src="https://raw.githubusercontent.com/sarweshwaranrs-dev/Personal-Portfolio/development/backend/Logo/github.svg" height="20" width="20" style="vertical-align:middle;" />
+                                <img src="https://raw.githubusercontent.com/sarweshwaranrs-dev/Personal-Portfolio/development/frontend/public/assets/images/github.svg" height="20" width="20" style="vertical-align:middle;" />
                             </a>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ exports.submitContact = async (req, res) => {
 
                         <!-- Message Section -->
                         <div style="background-color:#ffffff; border:1px solid #ddd; border-radius:12px; padding:20px; margin-top:15px; font-size:15px; line-height:1.6; color:#333;">
-                            <p style="margin:0 0 12px 0;">Hi, <strong>${personname}</strong>,</p>
+                            <p style="margin:0 0 12px 0;">Hi, <strong>Sarweshwaran R S</strong>,</p>
                             <p style="margin:0 0 12px 0;"> &emsp; You have received a new portfolio submission. Below are the details: </p>
                             <p style="margin:0 0 8px 0;"><strong>Name:</strong> ${personname}</p>
                             <p style="margin:0 0 8px 0;"><strong>Email:</strong> ${email}</p>

@@ -1,0 +1,25 @@
+.publications-section {
+    padding: 40px;
+}
+
+.publictation-cards, .profile-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.pub-card, .profile-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profile-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+mat-chip {
+    margin: 5px;
+    border-radius: 20px;
+}
