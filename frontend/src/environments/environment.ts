@@ -1,4 +1,5 @@
+const host = window.location.hostname;
 export const environment = {
     production: false,
-    baseApi: 'http://localhost:3000/api'
+    baseApi: `http://${host}/api`
 };
