@@ -15,7 +15,6 @@ interface Publication {
   technologies: string[];
   dataset: string;
   results: string;
-  url: string;
   orcidId: string;
   accessbook: string
 }
@@ -45,19 +44,17 @@ export class Publications {
       publisher: "IGI Global Scientic Publishing",
       role: "Co-author",
       year: 2025,
-      description: "Co-authored research on cassava plant disease detection using Deep Learning and Generative AI models.",
+      description: "Co-authored a book chapter on cassava plant disease detection leveraging Deep Learning and Generative AI. Implemented CNNs, Vision Transformers, and a Variational Autoencoder, achieving ~95% accuracy and demonstrating the effectiveness of generative models for anomaly detection in agriculture.",
       keyAchievements: [
-        "Developed a 5-class cassava plant disease detection system",
-        "Achieved 95% accuracy using Variational Autoencoder",
-        "Designed a robust pipeline with augmentation",
-        "Showcased Generative AI for anomlay detection"
+        "Achieved ~95% accuracy using a Variational Autoencoder for disease classification",
+        "Developed a robust training pipeline with advanced data augmentation techniques",
+        "Demonstrated the potential of Generative AI for anomaly detection in agriculture"
       ],
       technologies: [
         "Python", "Deep Learning", "Vision Transformer", "VGG16", "VAE", "PyTorch"
       ],
       dataset: "Kaggle Cassava Leaf Disease Dataset - 17,938 images (5 classes, Natural Sunlight, 800x600 resolution, split into 70:15:15)",
       results: "VAE achieved ~95% accuracy vs. ~80% with the best deep learning model, demonstrating superiority of generative approaches.",
-      url: "https://www.igi-global.com/book/humans-generative-tools-collaborative-intelligence/350260",
       orcidId: "https://doi.org/10.4018/979-8-3693-8332-2.ch009",
       accessbook: "./assets/research-paper.pdf"
     }
@@ -66,8 +63,8 @@ export class Publications {
   publicationProfiles : PublicationProfile[] = 
   [
     {
-      name: "ORCIE",
-      description: "Researcger identifier record",
+      name: "ORCID",
+      description: "Researcher identifier record",
       svg: "assets/images/orcid.svg",
       profile: "https://orcid.org/0009-0005-2073-7442"
     },
