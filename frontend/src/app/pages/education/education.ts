@@ -34,7 +34,7 @@ export class Education {
       grade: "92%",
       class: "VI to X",
       name: "Seventh Day Adventist Matrication Higher Secondary School",
-      logo: "/assets/images/sda-school-logo.jpg",
+      logo: "/assets/images/sda-vellore.png",
       duration: "2014-2019",
       status:  "Completed"    
     }
