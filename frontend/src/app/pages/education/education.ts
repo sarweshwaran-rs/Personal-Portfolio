@@ -12,16 +12,16 @@ import { CommonModule } from '@angular/common';
 export class Education {
   educations = [
     {
-      education: "School",
-      grade: "92%",
-      class: "VI to X",
-      name: "Seventh Day Adventist Matrication Higher Secondary School",
-      logo: "/assets/images/sda-school-logo.jpg",
-      duration: "2014-2019",
-      status:  "Completed"    
+      education: "Integrated PG",
+      grade: "8.31",
+      class: "M.Tech (Software Engineering)",
+      name: "Vellore Institute of Technology",
+      logo: "/assets/images/vit-logo.jpg",
+      duration: "2021-2026",
+      status: "Final Year" 
     },
     {
-      education: "School",
+      education: "Higher Secondary Certificate",
       grade: "89.8%",
       class: "XI to XII",
       name: "Lakshmi Garden Maticulation Higher Secondary School",
@@ -30,13 +30,13 @@ export class Education {
       status: "Completed"     
     },
     {
-      education: "PG",
-      grade: "8.31",
-      class: "M.Tech (Software Engineering)",
-      name: "Vellore Institute of Technology",
-      logo: "/assets/images/vit-logo.jpg",
-      duration: "2021-2026",
-      status: "Final Year" 
+      education: "Secondary School Certificate",
+      grade: "92%",
+      class: "VI to X",
+      name: "Seventh Day Adventist Matrication Higher Secondary School",
+      logo: "/assets/images/sda-school-logo.jpg",
+      duration: "2014-2019",
+      status:  "Completed"    
     }
   ];
 }
