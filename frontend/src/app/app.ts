@@ -5,11 +5,13 @@ import { Skills } from "./pages/skills/skills";
 import { Education } from "./pages/education/education";
 import { Publications } from "./pages/publications/publications";
 import { Projects } from "./pages/projects/projects";
-import { ContactForm } from "./contact-form/contact-form";
+import { ContactForm } from "./pages/contact-form/contact-form";
+import { Navbar } from "./shared/components/navbar/navbar";
+import { Footer } from "./footer/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, About, Education, Skills, Publications, Projects,ContactForm],
+  imports: [RouterOutlet, About, Education, Skills, Publications, Projects, ContactForm, Navbar, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
