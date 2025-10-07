@@ -1,0 +1,19 @@
+<nav class="navbar" [class.scrolled]="scrolled">
+  <div class="logo">SRS</div>
+
+  <div class="menu-icon" (click)="toggleMenu()" [class.active]="menuOpen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links" [class.active]="menuOpen">
+    <li><a routerLink="/" (click)="closeMenu()" class="active">Home</a></li>
+    <li><a href="#about" (click)="closeMenu()">About</a></li>
+    <li><a href="#education" (click)="closeMenu()">Education</a></li>
+    <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+    <li><a href="#publications" (click)="closeMenu()">Publications</a></li>
+    <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+    <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+  </ul>
+</nav>
