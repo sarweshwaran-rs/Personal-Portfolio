@@ -14,11 +14,12 @@ const app = express();
 
 const allowedOrigins = [
     'http://localhost:4200',
-    'http://192.168.1.19:4200',
+    'http://192.168.1.39:4200',
     'http://192.168.1.21:4200',
     'http://192.168.0.3:4200',
     'http://192.168.0.4:4200',
-    'http://192.168.1.23:4200'
+    'http://192.168.1.23:4200',
+    "http://192.168.75.254:4200",
 ];
 
 app.use(cors({
@@ -52,17 +53,28 @@ app.get("/api/github/pinned", async (req, res) => {
 });
 
 app.listen(PORT, "0.0.0.0", () => {
-    const networkInterface = os.networkInterfaces();
-    let networkAddress='localhost';
-    for(const iface of Object.values(networkInterface)) {
-        for(const alias of iface) {
-            if(alias.family ==='IPv4' && !alias.internal) {
-                networkAddress = alias.address;
+    const networkInterfaces = os.networkInterfaces();
+    let networkAddress = "localhost";
+
+    const addresses = [];
+    for (const iface of Object.values(networkInterfaces)) {
+        for (const alias of iface) {
+            if (alias.family === "IPv4" && !alias.internal) {
+                addresses.push(alias.address);
             }
         }
     }
-    console.log(`App Runnning on:
-        -> Local: http://localhost:${PORT}
-        -> Network: http://${networkAddress}:${PORT}`
-    );
+
+    const preferred =
+        addresses.find(addr => addr.startsWith("192.168.")) ||
+        addresses.find(addr => addr.startsWith("10.")) ||
+        addresses[0] ||
+        "localhost";
+
+    networkAddress = preferred;
+
+    console.log(`App Running on:
+        -> Local:   http://localhost:${PORT}
+        -> Network: http://${networkAddress}:${PORT}
+    `);
 });
