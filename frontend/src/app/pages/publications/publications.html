@@ -1,22 +1,58 @@
 <section class="publications-section">
     <h2> Applied AI <span>Research</span></h2>
-    <p> Leveraging deep learning and generative models to solve challenges at the intersection of biology and technology.</p>
-    
+    <p> Leveraging deep learning and generative models to solve challenges at the intersection of biology and
+        technology.</p>
+
     <div class="publication-card">
         @for(pub of publications; track pub.title)
         {
-            <img src={{pub.image}} />
+            <div class="publication-header">
+                <img src={{pub.image}} />
+                <h4>{{ pub.type }}</h4>  
+                <h4 style="left: 150px;">{{ pub.book }}</h4>
+                <p>{{ pub.chapter }} {{ pub.title }}</p>
+                <h4 style="top: 85px;">{{ pub.role}}</h4>
+                <h4 style="top: 85px; left: 150px;">Year: {{ pub.year }}</h4>
+                <h4 style="top: 85px; left: 280px;">Publisher: {{ pub.publisher }}</h4>
+            </div>
+
             <div class="publication-card-content-left">
                 <h2>Description</h2>
                 <p>{{ pub.description }}</p>
-
-                <h2>Key Achievements</h2>
+                <h2 style="padding-top: 20px;">Key Achievements</h2>
                 @for(achi of pub.keyAchievements; track achi) {
                     <p class="achi p-achi">{{ achi }}</p>
                 }
+                <h2 style="padding-top: 20px;">Technologies Used</h2>
+                <div class="tech-container">
+                    @for(tec of pub.technologies; track tec) {
+                        <p class="tech-used">{{ tec }}</p>
+                    }
+                </div>
             </div>
             <div class="publication-card-content-right">
                 <h2>Dataset</h2>
+                <p style="text-align: left;">{{ pub.dataset }}</p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <h2>Results</h2>
+                <p>{{ pub.results }}</p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <button class="read-book"><img src="assets/images/Read.svg"><span><a [href]=pub.accessbook
+                        target="_blank">Read Publication</a></span></button>
+                <button class="read-book" style="background-color: #0092ff;"><img
+                    src="assets/images/orcid-button.svg"><span><a [href]=pub.orcidId target="_blank">Read
+                        Publication</a></span></button>
             </div>
         }
     </div>

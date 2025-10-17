@@ -53,9 +53,9 @@ export class Publications {
         "Demonstrated the potential of Generative AI for anomaly detection in agriculture."
       ],
       technologies: [
-        "Python", "Deep Learning", "Vision Transformer", "VGG16", "VAE", "PyTorch"
+        "Python", "Deep Learning", "VGG16", "VAE", "PyTorch"
       ],
-      dataset: "Kaggle Cassava Leaf Disease Dataset - 17,938 images",
+      dataset: "Kaggle Cassava Leaf Disease Dataset",
       results: "Proposed model achieved 95% the original baseline achieved 80%",
       orcidId: "https://doi.org/10.4018/979-8-3693-8332-2.ch009",
       accessbook: "./assets/research-paper.pdf"
