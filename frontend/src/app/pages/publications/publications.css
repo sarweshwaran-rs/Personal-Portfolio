@@ -401,15 +401,134 @@
     text-align: left;
 }
 
-@media (min-width: 768px) {
+/* Tablet and below - General adjustments */
+@media (max-width: 768px) {
+    .publications-section {
+        padding: 20px;
+        margin: 5px;
+    }
+
+    .publications-section h2 {
+        font-size: 16px;
+    }
+
+    .publications-section p {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .publication-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 15px auto;
+        flex-direction: column;
+    }
+
+    .publication-header {
+        width: 100%;
+        height: 150px;
+        min-height: 150px;
+        max-height: 150px;
+        overflow: hidden;
+    }
+
+    .publication-header img {
+        width: 100%;
+        height: 150px;
+        min-height: 150px;
+        object-fit: cover;
+    }
+
+    .publication-header .chip {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .publication-header .chapter-title {
+        font-size: 13px;
+        left: 15px;
+        bottom: 10px;
+        max-width: calc(100% - 30px);
+    }
+
+    .publication-header h4 {
+        width: 100%;
+        margin-left: 0;
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .publication-card-content-left {
+        flex: 1 1 100%;
+        padding: 15px;
+        padding-bottom: 5px;
+    }
+
+    .publication-card-content-left h2,
+    .publication-card-content-right h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .publication-card-content-left p {
+        font-size: 14px;
+        padding-left: 5px;
+    }
+
+    .achi {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .tech-container {
+        padding-left: 5px;
+        gap: 6px;
+        margin-bottom: 0;
+    }
+
+    .tech-used {
+        font-size: 13px;
+        padding: 6px 12px;
+        margin-bottom: 10px;
+    }
+
+    .publication-card-content-right {
+        flex: 1 1 100%;
+        padding: 15px;
+        padding-top: 5px;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .publication-card-content-right p {
+        font-size: 13px;
+    }
+
+    .publication-card-content-right h2 {
+        padding-top: 0 !important;
+        margin-top: 5px;
+        margin-bottom: 8px;
+    }
+
+    .button-group {
+        flex-direction: row;
+        padding-top: 10px;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .read-book {
+        width: calc(50% - 5px);
+        max-width: none;
+        min-width: 150px;
+        margin: 0;
+    }
+
     .profile-card {
         width: calc(50% - 24px);
         max-width: none;
         margin: 12px;
-        display: flex;
-    }
-
-    .profile-card {
         display: inline-flex;
         vertical-align: top;
     }
@@ -427,14 +546,190 @@
     }
 }
 
+/* Large tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .publication-card {
+        width: 90%;
+        max-width: 700px;
+    }
+
+    .publication-header {
+        width: 100%;
+        height: 150px;
+        min-height: 150px;
+        max-height: 150px;
+    }
+
+    .publication-header img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .button-group {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .read-book {
+        width: auto;
+        min-width: 180px;
+    }
+}
+
+/* Desktop - Large screens */
 @media (min-width: 1024px) {
     .profile-card {
         width: calc(45% - 28px);
         margin: 16px;
     }
+
+    .button-group {
+        flex-direction: row;
+    }
+
+    .read-book {
+        width: 220px;
+    }
 }
 
+/* Mobile and small screens */
 @media (max-width: 480px) {
+    .publications-section {
+        padding: 15px;
+        margin: 0;
+    }
+
+    .publications-section h2 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .publications-section p {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 13px;
+    }
+
+    .publication-card {
+        width: 100%;
+        margin: 10px auto;
+        border-radius: 15px;
+    }
+
+    .publication-header {
+        height: 150px;
+        min-height: 150px;
+        max-height: 150px;
+        overflow: hidden;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .publication-header img {
+        height: 150px;
+        min-height: 150px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .publication-header .chip {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+
+    .publication-header .chapter-title {
+        font-size: 11px;
+        left: 10px;
+        bottom: 10px;
+        max-width: calc(100% - 20px);
+    }
+
+    .publication-card-content-left {
+        padding: 12px;
+        padding-bottom: 5px;
+    }
+
+    .publication-card-content-left h2 {
+        font-size: 15px;
+        margin-bottom: 8px;
+        margin-top: 5px;
+    }
+
+    .publication-card-content-right h2 {
+        font-size: 15px;
+        margin-bottom: 5px;
+        padding-top: 0 !important;
+        margin-top: 0;
+    }
+
+    .publication-card-content-left p {
+        font-size: 13px;
+        padding-left: 0;
+    }
+
+    .publication-card-content-left>.p-achi {
+        padding: 8px 5px;
+    }
+
+    .achi {
+        font-size: 12px;
+        padding: 7px 10px;
+        margin-bottom: 6px;
+    }
+
+    .tech-container {
+        padding-left: 0;
+        gap: 5px;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    .tech-used {
+        font-size: 12px;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+    }
+
+    .publication-card-content-right {
+        padding: 12px;
+        padding-top: 8px;
+        gap: 5px;
+    }
+
+    .publication-card-content-right p {
+        font-size: 12px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .button-group {
+        flex-direction: row;
+        padding-top: 8px;
+        gap: 8px;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .read-book {
+        width: calc(50% - 4px);
+        max-width: none;
+        min-width: 140px;
+        padding: 10px 10px;
+        margin: 0;
+    }
+
+    .read-book img {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
+
+    .read-book span a {
+        font-size: 13px;
+    }
+
     .profile-card {
         padding: 12px 14px;
         gap: 12px;
@@ -456,16 +751,120 @@
     }
 }
 
-.profile-card.vertical {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+/* Extra small screens */
+@media (max-width: 360px) {
+    .publications-section {
+        padding: 10px;
+    }
 
-.profile-card.vertical .profile-icon {
-    margin-bottom: 8px;
-}
+    .publications-section h2 {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
 
-.profile-card.vertical .profile-header {
-    justify-content: center;
+    .publication-header {
+        height: 150px;
+        min-height: 150px;
+        max-height: 150px;
+    }
+
+    .publication-header img {
+        height: 150px;
+        min-height: 150px;
+    }
+
+    .publication-header .chip {
+        font-size: 9px;
+        padding: 2px 7px;
+    }
+
+    .publication-header .chapter-title {
+        font-size: 10px;
+        bottom: 10px;
+    }
+
+    .publication-card-content-left h2 {
+        font-size: 14px;
+        margin-bottom: 6px;
+        margin-top: 3px;
+    }
+
+    .publication-card-content-right h2 {
+        font-size: 14px;
+        padding-top: 0 !important;
+        margin-top: 0;
+        margin-bottom: 3px;
+    }
+
+    .publication-card-content-left p,
+    .publication-card-content-right p {
+        font-size: 12px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .publication-card-content-right {
+        gap: 4px;
+        padding-top: 6px;
+    }
+
+    .publication-card-content-left {
+        padding-bottom: 3px;
+    }
+
+    .achi {
+        font-size: 11px;
+    }
+
+    .tech-container {
+        margin-top: 3px;
+        margin-bottom: 0;
+    }
+
+    .tech-used {
+        font-size: 11px;
+        padding: 4px 8px;
+        margin-bottom: 4px;
+    }
+
+    .button-group {
+        padding-top: 6px;
+        gap: 6px;
+        margin-top: 3px;
+    }
+
+    .read-book {
+        width: calc(50% - 3px);
+        min-width: 120px;
+        padding: 8px 8px;
+    }
+
+    .read-book img {
+        width: 14px;
+        height: 14px;
+        margin-right: 4px;
+    }
+
+    .read-book span a {
+        font-size: 12px;
+    }
+
+    .profile-card {
+        width: 95%;
+        max-width: 95%;
+        padding: 10px 12px;
+    }
+
+    .profile-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .profile-header h4 {
+        font-size: 0.9rem;
+    }
+
+    .profile-content p {
+        font-size: 0.85rem;
+    }
 }
