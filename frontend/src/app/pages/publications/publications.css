@@ -28,15 +28,63 @@
 
 .publication-header {
     position: relative;
+    width: 650px;
+    overflow: hidden;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
     justify-content: space-between;
+}
+
+
+.publication-header .chip {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: #eff4f6;
+    white-space: nowrap;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.publication-header .type-chip {
+    background-color: #0094ff;
+}
+
+.publication-header .book-chip {
+    background-color: #4CAF50;
+}
+
+.publication-header .chapter-title {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    max-width: calc(100% - 40px);
+    z-index: 1;
+}
+
+.publication-header .detail-chip {
+    background-color: #FFC107;
+    color: #333;
 }
 
 .publication-header img {
     width: 648px;
     height: 150px;
-    background-position: inherit;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -45,26 +93,28 @@
 
 .publication-header p {
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
     text-align: left;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 500;
-    max-width: 200px;
+    max-width: 90%;
 }
 
 .publication-header h4 {
     position: absolute;
     text-align: left;
-    top: 4px;
-    margin-left: 5%;
+    top: 10px;
+    margin-left: 20px;
     width: fit-content;
-    background-color: #00c1d4;
+    background-color: #0095ff;
     border-radius: 20px;
+    width: 650px;
     color: #eff4f6;
     padding: 10px 10px;
     gap: 2px;
     font-weight: 500;
+    overflow: hidden;
 }
 
 .publications-section h2 span {
@@ -83,45 +133,45 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 650px;
-    height: 800px;
-    border: 1px solid black;
+    height: auto;
+    border: 1px solid #e0e0e0;
     border-radius: 20px;
     margin: 20px auto;
     box-sizing: border-box;
     flex-wrap: wrap;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .publication-card-content-left {
-    flex: 1;
+    flex: 1 1 350px;
     width: 100%;
-    height: 700px;
+    height: auto;
     justify-content: space-between;
     padding-left: 20px;
     padding-top: 10px;
 }
 
-.publication-card-content-left h2 {
-    padding-left: 10px;
-    padding-top: 0px;
-    width: max-content;
+.publication-card-content-left h2,
+.publication-card-content-right h2 {
     font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-display: block;
-    font-style: normal;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 700;
     text-align: left;
-    display: block;
+    margin-bottom: 15px;
+    color: #333;
 }
 
 .publication-card-content-left p {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     margin-left: 0px;
     margin-right: 0px;
     max-width: 100%;
     text-align: justify;
     padding-left: 10px;
+    line-height: 1.6;
+    color: #555;
 }
 
 .publication-card-content-left>.p-achi {
@@ -134,13 +184,15 @@
     width: 100%;
     min-width: 90%;
     border-radius: 20px;
-    background-color: #ceeaff;
-    color: #0095ff;
+    background-color: #e8f3ff;
+    color: #007bff;
     padding: 10px 15px;
     line-height: 1.4;
     word-wrap: break-word;
     box-sizing: border-box;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .tech-container {
@@ -149,36 +201,33 @@
     gap: 8px;
     padding-left: 10px;
     justify-content: flex-start;
+    margin-top: 10px;
 }
 
 .tech-used {
+    border-radius: 30px;
+    padding: 8px 16px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    background-color: #ffc4c7;
-    color: #140f0f;
-    padding: 4px 10px;
+    background-color: #ffe0e0;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.0;
     box-sizing: border-box;
     margin: 0;
+    border: 1px solid rgba(255, 196, 199, 0.5);
+    margin-bottom: 15px;
 }
 
 .publication-card-content-right {
-    flex: 1;
-    width: 648px;
-    margin-left: 20px;
-    padding-left: 20px;
-    padding-top: 10px;
-}
-
-.publication-card-content-right h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    text-align: left;
+    flex: 1 1 240px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .publication-card-content-right p {
@@ -187,45 +236,46 @@
     text-align: left;
     margin: 0;
     font-weight: 500;
+    padding-top: 0;
 }
 
 .read-book {
-    width: 200px;
+    width: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    margin: 20px;
-    background-color: #00ab47;
+    padding: 12px 20px;
+    background-color: #28a745;
     border-radius: 30px;
     border: none;
     outline: none;
-    transition: all 0.2s ease
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin: 10px 0;
 }
 
-.read-book a:hover {
-    transform: scale(1.05);
+.read-book:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .read-book img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
 }
 
-.read-book a {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
+.read-book span a {
+    font-size: 15px;
     font-weight: 600;
+    font-family: 'Inter', sans-serif;
     color: #FFFFFF;
     text-decoration: none;
-
-    text-align: center;
-    align-items: center;
-    margin: 0;
-    transition: none;
 }
 
+.read-book.orcid-button {
+    background-color: #007bff;
+}
 
 /* Profile Card Section */
 
