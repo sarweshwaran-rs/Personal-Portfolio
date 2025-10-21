@@ -1,6 +1,40 @@
-<h2>Skills</h2>
-<div class="skills-grid">
-    @for(skl of skills; track skl) {
-        <app-skill-card [skill]="skl"></app-skill-card>
-    }
+<div class="skills-section">
+    <h2>Technical <span>Skills</span></h2>
+    <p>A comprehensive overview of the technologies and tools I work with, from programming languages to frameworks and
+        cloud services</p>
+    <div class="skills-group">
+        <span class="group-title">Languages</span>
+        <div class="skills-grid">
+            @for(skl of groupedSkills.lang; track skl.name) {
+                <app-skill-card [skill]="skl"></app-skill-card>
+            }
+        </div>
+    </div>
+
+    <div class="skills-group">
+        <span class="group-title">Frameworks & Libraries</span>
+        <div class="skills-grid">
+            @for(skl of groupedSkills.FandL; track skl.name) {
+                <app-skill-card [skill]="skl"></app-skill-card>
+            }
+        </div>
+    </div>
+
+    <div class="skills-group">
+        <span class="group-title">Cloud & Databases</span>
+        <div class="skills-grid">
+            @for(skl of groupedSkills.CandD; track skl.name) {
+                <app-skill-card [skill]="skl"></app-skill-card>
+            }
+        </div>
+    </div>
+
+    <div class="skills-group">
+        <span class="group-title">Tools & Others</span>
+        <div class="skills-grid">
+            @for(skl of groupedSkills.TandO; track skl.name) {
+                <app-skill-card [skill]="skl"></app-skill-card>
+            }
+        </div>
+    </div>
 </div>
