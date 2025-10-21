@@ -1,6 +1,8 @@
 @if(skill) {
     <div class="skill-card">
-        <img [src]="skill.image" alt="{{skill.name}} logo" width="50" height="50" />
-        <p>{{skill.name}}</p>
+       <a [href]="skill.link" target="_blank">
+            <img [src]="skill.image" alt="{{skill.name}} logo" width="50" height="50" />
+            <p>{{skill.name}}</p>
+        </a>
     </div>
 }
