@@ -1,5 +1,5 @@
-<nav class="navbar" [class.scrolled]="scrolled">
-  <div class="logo">SRS</div>
+<nav class="navbar" [class.scrolled]="scrolled" [class.hidden]="hidden">
+  <div class="logo"><a (click)="scrollToSection('hero');" [class.active]="isActive('hero')">SRS</a></div>
 
   <div class="menu-icon" (click)="toggleMenu()" [class.active]="menuOpen">
     <span></span>
@@ -8,12 +8,13 @@
   </div>
 
   <ul class="nav-links" [class.active]="menuOpen">
-    <li><a routerLink="/" (click)="closeMenu()" class="active">Home</a></li>
-    <li><a href="#about" (click)="closeMenu()">About</a></li>
-    <li><a href="#education" (click)="closeMenu()">Education</a></li>
-    <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
-    <li><a href="#publications" (click)="closeMenu()">Publications</a></li>
-    <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
-    <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+    <li><a (click)="scrollToSection('hero'); closeMenu()" [class.active]="isActive('hero')">Home</a></li>
+    <li><a (click)="scrollToSection('about-me'); closeMenu()" [class.active]="isActive('about-me')">About</a></li>
+    <li><a (click)="scrollToSection('education'); closeMenu()" [class.active]="isActive('education')">Education</a></li>
+    <li><a (click)="scrollToSection('skills'); closeMenu()" [class.active]="isActive('skills')">Skills</a></li>
+    <li><a (click)="scrollToSection('publications'); closeMenu()"
+        [class.active]="isActive('publications')">Publications</a></li>
+    <li><a (click)="scrollToSection('projects'); closeMenu()" [class.active]="isActive('projects')">Projects</a></li>
+    <li><a (click)="scrollToSection('contact'); closeMenu()" [class.active]="isActive('contact')">Contact</a></li>
   </ul>
 </nav>
