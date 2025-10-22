@@ -6,8 +6,9 @@
 }
 
 .project-card {
-  width: 350px;
-  height: 200px;
+  width: 100%;
+  max-width: 350px;
+  height: 220px;
   border: 1px solid #d1d5db;
   border-radius: 12px;
   background-color: #fff;
@@ -18,7 +19,9 @@
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin: 0px 20px 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .project-card:hover {
@@ -38,6 +41,11 @@
   font-weight: 600;
   margin: 0;
   color: #111827;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  margin-right: 10px;
 }
 
 .card-header a img {
@@ -52,15 +60,26 @@
   transform: scale(1.1);
 }
 
+.card-top {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 .card-top p {
   font-size: 14px;
   color: #374151;
   margin: 8px 0 0 0;
   text-align: left;
-  justify-content: center;
-  padding-left: 20px;
-  padding-right: 20px; 
-  padding-top: 5px;
+  padding: 5px 0 0 0;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  flex: 1;
 }
 
 .card-bottom {
@@ -105,4 +124,35 @@
 .contributed {
   background-color: #3b82f6; 
   color: white;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 599px) {
+  .project-card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+  
+  .card-top p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    height: 200px;
+    min-height: 200px;
+    padding: 14px;
+  }
+  
+  .card-header h5 {
+    font-size: 16px;
+  }
+  
+  .card-top p {
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+  }
 }
