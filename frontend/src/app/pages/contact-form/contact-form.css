@@ -15,13 +15,23 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0px 16px 0px;
-  margin: 0 auto;
+  padding: 40px 16px;
+  margin: 20px auto;
   max-width: 900px;
   font-family: 'Inter', sans-serif;
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
+  background: linear-gradient(
+    130deg,
+    #f5f9ff 0%,
+    #e8f4ff 30%,
+    #ffffff 50%,
+    #f0f8ff 70%,
+    #f8fbff 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(75, 136, 208, 0.11);
 }
 
 /* Centered layout */
