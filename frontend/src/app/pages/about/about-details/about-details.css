@@ -1,16 +1,436 @@
-.btn-resume {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #007bff;
-  border-radius: 6px;
-  color: #007bff;
-  background: transparent;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter.ttc'), url('/assets/fonts/InterVariable.ttf'), url('/assets/fonts/InterVariable-Italic.ttf');
 }
 
-.btn-resume:hover {
-  background: #007bff;
-  color: white;
+.about-me {
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: auto;
+  background: linear-gradient(135deg,
+      #f8fbff 0%,
+      #ffffff 20%,
+      #f0f8ff 40%,
+      #e8f4ff 60%,
+      #f5f9ff 80%,
+      #ffffff 100%);
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 20px rgba(75, 136, 208, 0.1);
+}
+
+.about-me h2 {
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin: 16px 0px;
+}
+
+h2 span {
+  color: #4B88D0;
+}
+
+.about-me p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 700px;
+  line-height: 1.5rem;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.details {
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  align-items: center;
+  line-height: 1.5rem;
+}
+
+.details li {
+  list-style: none;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  align-items: center;
+  text-align: justify;
+  max-width: 1000px;
+}
+
+.details a {
+  text-decoration: none;
+  color: #000;
+}
+
+.details a:hover {
+  color: #4B88D0;
+}
+
+.opportunity-resume strong {
+  color: #127c06;
+  font-weight: 500;
+}
+
+.view-resume img {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.view-resume:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.opportunity-resume {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid #000;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  max-width: 1000px;
+}
+
+.opportunity-text {
+  text-align: center;
+  line-height: 1.6;
+  font-size: inherit;
+}
+
+
+.view-resume {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  padding: 10px 10px;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  width: fit-content;
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #2563EB;
+  border-radius: 10px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Extra Large Devices (Large Desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .about-me h2 {
+    font-size: 24px;
+    margin: 20px 0px;
+  }
+
+  .about-me p {
+    font-size: 18px;
+    max-width: 800px;
+    line-height: 1.6rem;
+  }
+
+  .details li {
+    max-width: 1200px;
+    font-size: 16px;
+  }
+
+  .opportunity-resume {
+    max-width: 1200px;
+    font-size: 18px;
+    padding: 18px 25px;
+    margin: 20px 0px;
+    gap: 18px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .opportunity-text {
+    text-align: left;
+    flex: 1;
+  }
+
+  .view-resume {
+    font-size: 20px;
+    padding: 12px 15px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* Large Devices (Desktops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about-me {
+    padding: 0 20px;
+  }
+
+  .about-me h2 {
+    font-size: 22px;
+  }
+
+  .about-me p {
+    font-size: 17px;
+    max-width: 750px;
+  }
+
+  .details li {
+    max-width: 950px;
+  }
+
+  .opportunity-resume {
+    max-width: 950px;
+    padding: 15px 20px;
+    margin: 20px 0px;
+    gap: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .opportunity-text {
+    text-align: left;
+    flex: 1;
+  }
+
+  .view-resume {
+    margin: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* Medium Devices (Tablets, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-me {
+    padding: 30px 20px;
+    margin: 15px auto;
+  }
+
+  .about-me h2 {
+    font-size: 20px;
+    margin: 15px 0px;
+  }
+
+  .about-me p {
+    font-size: 16px;
+    max-width: 600px;
+    line-height: 1.5rem;
+  }
+
+  .details li {
+    max-width: 700px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+  }
+
+  .opportunity-resume {
+    max-width: 700px;
+    font-size: 15px;
+    padding: 12px 18px;
+    margin: 18px 0px;
+    gap: 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .opportunity-text {
+    text-align: left;
+    flex: 1;
+  }
+
+  .view-resume {
+    font-size: 17px;
+    padding: 10px 12px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .view-resume img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Small Devices (Landscape Phones, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .about-me {
+    padding: 25px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: auto;
+    max-width: none;
+  }
+
+  .about-me h2 {
+    font-size: 18px;
+    margin: 12px 0px;
+  }
+
+  .about-me p {
+    font-size: 15px;
+    max-width: 500px;
+    line-height: 1.4rem;
+  }
+
+  .details {
+    text-align: left;
+    width: 100%;
+  }
+
+  .details li {
+    max-width: 100%;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    text-align: justify;
+    padding: 0;
+  }
+
+  .opportunity-resume {
+    max-width: 100%;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin: 16px 0px;
+    gap: 10px;
+  }
+
+  .view-resume {
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 8px 0px;
+    align-self: center;
+  }
+
+  .view-resume img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Extra Small Devices (Portrait Phones, up to 575px) */
+@media (max-width: 575px) {
+  .about-me {
+    padding: 20px 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    max-width: none;
+    border-radius: 15px;
+  }
+
+  .about-me h2 {
+    font-size: 18px;
+    margin: 10px 0px;
+  }
+
+  .about-me p {
+    font-size: 14px;
+    max-width: 100%;
+    line-height: 1.4rem;
+    padding: 0px 20px;
+  }
+
+  .details {
+    text-align: left;
+    width: 100%;
+  }
+
+  .details ul {
+    padding: 0px 20px;
+  }
+
+  .details li {
+    max-width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: justify;
+    margin-left: 0;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 1.5rem;
+  }
+
+  .opportunity-resume {
+    max-width: calc(100% - 30px);
+    font-size: 13px;
+    padding: 15px;
+    margin: 15px;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  .view-resume {
+    font-size: 15px;
+    padding: 10px 15px;
+    margin: 0;
+    width: fit-content;
+    border-radius: 8px;
+  }
+
+  .view-resume img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Very Small Devices (320px and below) */
+@media (max-width: 320px) {
+  .about-me {
+    padding: 15px 12px;
+    margin: 8px;
+    width: calc(100vw - 32px);
+    max-width: calc(100vw - 32px);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .about-me h2 {
+    font-size: 16px;
+    margin: 8px 0px;
+  }
+
+  .about-me p {
+    font-size: 13px;
+    line-height: 1.3rem;
+  }
+
+  .details li {
+    font-size: 13px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    text-align: justify;
+    line-height: 1.4rem;
+  }
+
+  .opportunity-resume {
+    font-size: 12px;
+    padding: 12px;
+    margin: 12px 0px;
+    gap: 8px;
+  }
+
+  .view-resume {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .view-resume img {
+    width: 16px;
+    height: 16px;
+  }
 }
