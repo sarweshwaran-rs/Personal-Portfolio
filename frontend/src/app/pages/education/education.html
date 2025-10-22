@@ -1,6 +1,9 @@
-<h2>Education</h2>
-<div class="education-list">
-    @for(edu of educations; track edu) {
-        <app-education-card [education]="edu"></app-education-card>
-    }
-</div>
+<section class="education-section">
+    <h2>My <span>Education</span></h2>
+    <p>My academic journey showcasing my educational qualifications and achievements from school to postgraduate studies.</p>
+    <div class="education-list">
+        @for(edu of educations; track edu) {
+            <app-education-card [education]="edu"></app-education-card>
+        }
+    </div>
+</section>

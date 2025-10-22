@@ -13,7 +13,7 @@ export class Education {
   educations = [
     {
       education: "Integrated PG",
-      grade: "8.31",
+      grade: "8.31 CGPA",
       class: "M.Tech (Software Engineering)",
       name: "Vellore Institute of Technology",
       logo: "/assets/images/vit-logo.jpg",
@@ -23,19 +23,19 @@ export class Education {
     {
       education: "Higher Secondary Certificate",
       grade: "89.8%",
-      class: "XI to XII",
+      class: "XIIth-std",
       name: "Lakshmi Garden Maticulation Higher Secondary School",
       logo: "/assets/images/lgms-school-logo.png",
-      duration: "2019-2021",
+      duration: "2020-2021",
       status: "Completed"     
     },
     {
       education: "Secondary School Certificate",
       grade: "92%",
-      class: "VI to X",
+      class: "Xth-std",
       name: "Seventh Day Adventist Matrication Higher Secondary School",
       logo: "/assets/images/sda-vellore.png",
-      duration: "2014-2019",
+      duration: "2018-2019",
       status:  "Completed"    
     }
   ];
