@@ -1,13 +1,12 @@
 @if(education)
 {
-    <div class="card">
-        <img [src]="education.logo" alt="{{education?.name}} logo" width="50" height="50" />
-        <div class="card-body">
-            <h3>{{education.name}}</h3>
-            <p><strong>Class:</strong>{{education?.class}}</p>
-            <p><strong>Grade:</strong>{{education?.grade}}</p>
-            <p><strong>Duration:</strong>{{education?.duration}}</p>
-            <p><strong>Status:</strong>{{education?.status}}</p>
-        </div>
+<div class="education-card">
+    <img [src]="education.logo" alt="{{ education?.name}} logo" />
+    <div class="education-details">
+        <span class="name">{{ education?.education }}</span>
+        <p class="institute">{{education?.name}}<span class="duration" style="left: 500px;">{{ education?.duration }}</span></p>
+        <p class="div-class" >{{education?.class}}  <span class="status">{{ education?.status }}</span> </p>
+        <strong class="grade">{{education?.grade}}</strong>
     </div>
+</div>
 }

@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/Inter.ttc'),url('/assets/fonts/InterVariable.ttf'), url('/assets/fonts/InterVariable-Italic.ttf');
+}
+
+.education-card {
+    margin: 20px 0px;
+    border: 1px solid #e0e0e0;
+    border-radius: 30px;
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.education-card img {
+    position: relative;
+    top: 50px;
+    left: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+    -webkit-user-drag: none;
+    user-select: none;
+    padding: 30px 20px;
+    vertical-align: middle;
+}
+
+.education-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: 'Inter';
+    font-size: 18px;
+    text-align: left;
+    padding: 20px 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.name {
+    top: 40px;
+    padding-top: 15px;
+    color: #0000FF;
+    width: max-content;
+}
+
+.institute {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+    line-height: 2rem;
+    margin: 0;
+}
+
+.duration {
+    margin-left: 12px;
+    border-radius: 30px;
+    padding: 8px 12px;
+    background-color: #848DF4;
+    color: #3D18DF;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.grade {
+    flex: 1;
+    vertical-align: middle;
+    margin: 0;
+    padding: 10px 0px;
+}
+
+.div-class {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 0px; 
+    padding: 10px 0px;
+}
+
+.status {
+    border-radius: 30px;
+    padding: 8px 12px;
+    align-self: flex-end;
+    background-color: rgba(11, 254, 80, 0.25);
+    color: #1E962A;
+    margin-left: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ----------- Responsive Design for Education Card ----------- */
+
+/* Tablets and medium screens */
+@media (max-width: 1024px) {
+    .education-card {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .education-card img {
+        width: 120px;
+        height: 120px;
+        top: 20px;
+        left: 20px;
+        padding: 20px;
+    }
+
+    .education-details {
+        padding: 20px 30px;
+        font-size: 16px;
+    }
+
+    .duration,
+    .status {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .education-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .education-card img {
+        position: static;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .education-details {
+        align-items: center;
+        padding: 0;
+    }
+
+    .institute, .div-class {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .duration, .status {
+        margin-left: 0;
+        font-size: 13px;
+        padding: 6px 10px;
+        align-self: center;
+        text-align: center;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .grade {
+        font-size: 15px;
+    }
+}
+
+/* Very small mobile screens */
+@media (max-width: 480px) {
+    .education-card {
+        padding: 15px;
+    }
+
+    .education-details {
+        font-size: 14px;
+        gap: 4px;
+    }
+
+    .duration, .status {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+}
