@@ -1,13 +1,13 @@
-<section class="publications-section">
+<section id="publications" class="publications-section section-animate">
     <h2> Applied AI <span>Research</span></h2>
     <p> Leveraging deep learning and generative models to solve challenges at the intersection of biology and
         technology.</p>
 
-    <div class="publication-card">
+    <div class="publication-card card-animate">
         @for(pub of publications; track pub.title)
         {
             <div class="publication-header">
-                <img src={{pub.image}} alt="Publication Background"/>
+                <img ngSrc={{pub.image}} fill alt="Publication Background"/>
                 <div style="position: absolute; top: 10px; left: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
                     <span class="chip type-chip">{{ pub.type }}</span>
                     <span class="chip book-chip">{{ pub.book }}</span>
