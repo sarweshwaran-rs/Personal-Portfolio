@@ -9,11 +9,19 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 20px 5%;
+  padding: 40px 5%;
   width: 100%;
   max-width: 1200px;
-  margin: auto;
-  padding-bottom: 0px;
+  margin: 20px auto;
+  background: linear-gradient(
+    150deg,
+    #f0f8ff 0%,
+    #ffffff 30%,
+    #e8f4ff 60%,
+    #f8fbff 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(75, 136, 208, 0.12);
 }
 
 .skills-section h2 {
