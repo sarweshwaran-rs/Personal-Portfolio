@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatChipsModule } from '@angular/material/chips';
-
+import { NgOptimizedImage } from '@angular/common';
 interface Publication {
   image: string;
   title: string;
@@ -30,7 +28,7 @@ interface PublicationProfile {
 
 @Component({
   selector: 'app-publications',
-  imports: [MatCardModule, MatChipsModule],
+  imports: [NgOptimizedImage],
   templateUrl: './publications.html',
   styleUrl: './publications.css'
 })
