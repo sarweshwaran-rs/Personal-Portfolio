@@ -1,4 +1,4 @@
-<section class="projects">
+<section id="projects" class="projects section-animate">
     <h2>Featured <span>Projects</span></h2>
     <p>A Section to showcase my works and Contribution</p>
     <div class="project-grid">
@@ -7,7 +7,7 @@
                 <app-project-card [project]="pro"></app-project-card>
             }
             <div class="buttons">
-                <button class="btn-view" (click)="(toggleView())">
+                <button class="btn-view btn-animate hover-lift" (click)="(toggleView())">
                     {{ showAll ? 'View Less': 'View More' }}
                 </button>
                 @if(showAll){
