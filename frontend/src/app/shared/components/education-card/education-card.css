@@ -4,71 +4,77 @@
 }
 
 .education-card {
-    margin: 20px 0px;
+    margin: 15px 0px;
     border: 1px solid #e0e0e0;
-    border-radius: 30px;
+    border-radius: 20px;
     width: auto;
     height: auto;
     display: flex;
+    max-width: 600px;
 }
 
 .education-card img {
     position: relative;
-    top: 50px;
-    left: 30px;
+    top: 25px;
+    left: 20px;
     border: 1px solid #e0e0e0;
-    border-radius: 20px;
-    width: 150px;
-    height: 150px;
+    border-radius: 15px;
+    width: 100px;
+    height: 100px;
     -webkit-user-drag: none;
     user-select: none;
-    padding: 30px 20px;
+    padding: 15px 10px;
     vertical-align: middle;
 }
 
 .education-details {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: 15px;
     text-align: left;
-    padding: 20px 50px;
+    padding: 15px 30px;
     width: 100%;
     box-sizing: border-box;
 }
 
 .name {
-    top: 40px;
-    padding-top: 15px;
+    top: 20px;
+    padding-top: 8px;
     color: #0000FF;
     width: max-content;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .institute {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0px;
-    line-height: 2rem;
+    padding: 12px 0px;
+    line-height: 1.4rem;
     margin: 0;
+    font-size: 14px;
 }
 
 .duration {
-    margin-left: 12px;
-    border-radius: 30px;
-    padding: 8px 12px;
+    margin-left: 8px;
+    border-radius: 20px;
+    padding: 6px 10px;
     background-color: #848DF4;
     color: #3D18DF;
     white-space: nowrap;
     flex-shrink: 0;
+    font-size: 12px;
 }
 
 .grade {
     flex: 1;
     vertical-align: middle;
     margin: 0;
-    padding: 10px 0px;
+    padding: 6px 0px;
+    font-size: 14px;
 }
 
 .div-class {
@@ -76,18 +82,20 @@
     align-items: center;
     justify-content: space-between;
     margin: 0px 0px; 
-    padding: 10px 0px;
+    padding: 6px 0px;
+    font-size: 14px;
 }
 
 .status {
-    border-radius: 30px;
-    padding: 8px 12px;
+    border-radius: 20px;
+    padding: 6px 10px;
     align-self: flex-end;
     background-color: rgba(11, 254, 80, 0.25);
     color: #1E962A;
-    margin-left: 12px;
+    margin-left: 8px;
     white-space: nowrap;
     flex-shrink: 0;
+    font-size: 12px;
 }
 
 /* ----------- Responsive Design for Education Card ----------- */
@@ -97,26 +105,35 @@
     .education-card {
         flex-direction: row;
         align-items: center;
-        padding: 10px;
+        padding: 8px;
+        max-width: 500px;
     }
 
     .education-card img {
-        width: 120px;
-        height: 120px;
-        top: 20px;
-        left: 20px;
-        padding: 20px;
+        width: 80px;
+        height: 80px;
+        top: 15px;
+        left: 15px;
+        padding: 12px;
     }
 
     .education-details {
-        padding: 20px 30px;
-        font-size: 16px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .name {
+        font-size: 13px;
+    }
+
+    .institute, .div-class, .grade {
+        font-size: 13px;
     }
 
     .duration,
     .status {
-        font-size: 14px;
-        padding: 6px 10px;
+        font-size: 11px;
+        padding: 5px 8px;
     }
 }
 
@@ -126,58 +143,75 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 20px;
+        padding: 15px;
+        max-width: 400px;
     }
 
     .education-card img {
         position: static;
-        width: 100px;
-        height: 100px;
-        padding: 10px;
-        margin-bottom: 10px;
+        width: 70px;
+        height: 70px;
+        padding: 8px;
+        margin-bottom: 8px;
     }
 
     .education-details {
         align-items: center;
         padding: 0;
+        font-size: 13px;
     }
 
     .institute, .div-class {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
     }
 
     .duration, .status {
         margin-left: 0;
-        font-size: 13px;
-        padding: 6px 10px;
+        font-size: 11px;
+        padding: 5px 8px;
         align-self: center;
         text-align: center;
     }
 
     .name {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .grade {
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 
 /* Very small mobile screens */
 @media (max-width: 480px) {
     .education-card {
-        padding: 15px;
+        padding: 12px;
+        max-width: 350px;
+    }
+
+    .education-card img {
+        width: 60px;
+        height: 60px;
+        padding: 6px;
     }
 
     .education-details {
-        font-size: 14px;
-        gap: 4px;
+        font-size: 12px;
+        gap: 3px;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+
+    .institute, .div-class, .grade {
+        font-size: 12px;
     }
 
     .duration, .status {
-        font-size: 12px;
-        padding: 5px 8px;
+        font-size: 10px;
+        padding: 4px 6px;
     }
 }
