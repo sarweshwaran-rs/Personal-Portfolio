@@ -13,9 +13,18 @@
 
 .publications-section {
     padding: 40px;
-    padding-bottom: 0;
-    margin: 10px;
-    padding-top: 0px;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    background: linear-gradient(
+        160deg,
+        #f8fbff 0%,
+        #e8f4ff 25%,
+        #ffffff 50%,
+        #f0f8ff 75%,
+        #f5f9ff 100%
+    );
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(75, 136, 208, 0.1);
 }
 
 .publications-section h2 {
