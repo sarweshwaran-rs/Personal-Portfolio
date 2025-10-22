@@ -17,8 +17,8 @@ export class About implements OnInit {
 
   private roleIndex = 0;
   private charIndex = 0;
-  private typingSpeed = 100;
-  private erasingSpeed = 50;
+  private typingSpeed = 10;
+  private erasingSpeed = 20;
   private delayBetweenRoles = 2000;
 
   ngOnInit(): void {
