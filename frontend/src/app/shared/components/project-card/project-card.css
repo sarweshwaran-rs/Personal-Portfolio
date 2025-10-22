@@ -76,6 +76,7 @@
   line-height: 1.4;
   overflow: hidden;
   display: -webkit-box;
+  line-clamp: 4;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
@@ -150,9 +151,10 @@
   .card-header h5 {
     font-size: 16px;
   }
-  
+
   .card-top p {
-    font-size: 13px;
+    font-size: 13px; 
+    line-clamp: 3;
     -webkit-line-clamp: 3;
   }
 }
