@@ -1,65 +1,70 @@
-<section class="publications-section">
-    <h2> Publications</h2>
+<section id="publications" class="publications-section section-animate">
+    <h2> Applied AI <span>Research</span></h2>
+    <p> Leveraging deep learning and generative models to solve challenges at the intersection of biology and
+        technology.</p>
 
-    <div class="publication-cards">
-        @for(pub of publications; track pub.title) 
+    <div class="publication-card card-animate">
+        @for(pub of publications; track pub.title)
         {
-            <mat-card class="pub-card">
-                <mat-card-header>
-                    <mat-card-header>{{ pub.title }}</mat-card-header>
-                    <mat-card-subtitle>{{ pub.type}} . {{ pub.role }} . {{ pub.year }}</mat-card-subtitle>
-                </mat-card-header>
+            <div class="publication-header">
+                <img ngSrc={{pub.image}} fill alt="Publication Background"/>
+                <div style="position: absolute; top: 10px; left: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span class="chip type-chip">{{ pub.type }}</span>
+                    <span class="chip book-chip">{{ pub.book }}</span>
+                </div>
+                <p class="chapter-title">{{ pub.chapter }} {{ pub.title }}</p>
+                <div style="position:  absolute; bottom: 10px; left: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span class="chip detail-chip">{{ pub.role }}</span>
+                    <span class="chip detail-chip">Year: {{ pub.year }}</span>
+                    <span class="chip detail-chip">Publisher: {{ pub.publisher }}</span>
+                </div>
+            </div>
 
-                <mat-card-content>
-                    <p><strong>Book:</strong>{{pub.book}} (Chapter {{pub.chapter}})</p>
-                    <p><strong>Publisher:</strong>{{pub.publisher}}</p>
-                    <p>{{pub.description}}</p>
-
-                    @if(pub.keyAchievements) {
-                        <h4>Key Achievements</h4>
-                        <ul>
-                            @for (achievement of pub.keyAchievements; track achievement) {
-                                <li>{{ achievement }}</li>
-                            }
-                        </ul>
+            <div class="publication-card-content-left">
+                <h2>Description</h2>
+                <p>{{ pub.description }}</p>
+                <h2 style="padding-top: 20px;">Key Achievements</h2>
+                @for(achi of pub.keyAchievements; track achi) {
+                    <p class="achi p-achi">{{ achi }}</p>
+                }
+                <h2 style="padding-top: 20px;">Technologies Used</h2>
+                <div class="tech-container">
+                    @for(tec of pub.technologies; track tec) {
+                        <span class="tech-used">{{ tec }}</span>
                     }
+                </div>
+            </div>
+            <div class="publication-card-content-right">
+                <h2>Dataset</h2>
+                <p style="text-align: left;">{{ pub.dataset }}</p>
+                <h2 style="padding-top: 40px;">Results</h2>
+                <p>{{ pub.results }}</p>
 
-                    @if(pub.technologies.length > 0) {
-                        <h4>Technologies</h4>
-                        <mat-chip-listbox>
-                            @for(tech of pub.technologies; track tech) {
-                                <mat-chip option selected color="primary">{{ tech }}</mat-chip>
-                            }
-                        </mat-chip-listbox>
-                    }
-                    <p><strong>Dataset:</strong>{{ pub.dataset }}</p>
-                    <p><strong>Results:</strong>{{ pub.results }}</p>
-                </mat-card-content>
-
-                <mat-card-actions>
-                    <a mat-button color="primary" [href]="pub.url" target="_blank">View DOI</a>
-                    <a mat-button color="accent" [href]="pub.accessbook" target="_blank">Read Chapter</a>
-                    <a mat-button [href]="pub.orcidId" target="_blank">ORCID</a>
-                </mat-card-actions>
-            </mat-card>
+                <div class= "button-group">
+                    <button class="read-book"><img src="assets/images/Read.svg"><span><a [href]=pub.accessbook target="_blank">Read Publication</a></span></button>
+                    <button class="read-book orcid-button"><img src="assets/images/orcid-button.svg"><span><a [href]=pub.orcidId target="_blank">View Orcid</a></span></button>
+                </div>
+            </div>
         }
     </div>
 
-    <h2>Profiles</h2>
-    <div class="profile-cards">
+    <h2 style="margin-top: 20px; padding: 20px 0;">Research <span>Profiles</span></h2>
+    <div class="profile-cards-wrapper">
         @for(profile of publicationProfiles; track profile.name) {
-            <mat-card class="profile-card">
-                <mat-card-header>
-                    <img [src]="profile.svg" alt="{{profile.name}} logo" class="profile-logo" width="32" height="32"/>
-                    <mat-card-title>{{profile.name}}</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                    <p>{{profile.description}}</p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <a mat-button color="primary" [href]="profile.profile" target="_blank">Visit</a>
-                </mat-card-actions>
-            </mat-card>
+        <div class="profile-card">
+            <div class="profile-icon">
+                <img [src]="profile.svg" alt="profile.svg-image" />
+            </div>
+            <div class="profile-content">
+                <div class="profile-header">
+                    <h4> {{ profile.name }}</h4>
+                    <a [href]="profile.profile" target="_blank">
+                        <img src="assets/images/external-link.svg" alt="External link" />
+                    </a>
+                </div>
+                <p>{{ profile.description }}</p>
+            </div>
+        </div>
         }
     </div>
 </section>

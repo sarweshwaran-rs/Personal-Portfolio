@@ -1,7 +1,110 @@
-.skills-grid {
+@font-face {
+  font-family: 'Inter';
+  src: url("/assets/fonts/Inter.ttc"),
+       url("/assets/fonts/InterVariable.ttf"),
+       url("/assets/fonts/InterVariable-Italic.ttf");
+}
+
+.skills-section {
+  box-sizing: border-box;
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  padding: 20px;
+  flex-direction: column;
+  padding: 40px 5%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: linear-gradient(
+    150deg,
+    #f0f8ff 0%,
+    #ffffff 30%,
+    #e8f4ff 60%,
+    #f8fbff 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(75, 136, 208, 0.12);
+}
+
+.skills-section h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.skills-section span {
+  color: #4b8bd0;
+}
+
+.skills-section p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+.skills-group {
+  margin-bottom: 40px;
+}
+
+.group-title {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #4b8bd0;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 6px;
+  justify-items: center;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 4px;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .skills-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .group-title {
+    font-size: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 10px 3%;
+  }
+
+  .skills-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .skills-section p {
+    font-size: 0.9rem;
+  }
+
+  .group-title {
+    font-size: 0.95rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 10px;
+  }
 }

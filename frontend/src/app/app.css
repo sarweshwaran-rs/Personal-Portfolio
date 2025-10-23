@@ -1,0 +1,62 @@
+@import '../app/shared/styles/animations.css';
+
+/* Global smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 65px;
+  }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  transition: all 0.3s ease;
+}
+
+button,
+.btn,
+a[role="button"] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover,
+.btn:hover,
+a[role="button"]:hover {
+  transform: translateY(-2px);
+}
+
+input,
+textarea,
+select {
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  transform: scale(1.02);
+}
+
+.card,
+.project-card,
+.skill-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover,
+.project-card:hover,
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}

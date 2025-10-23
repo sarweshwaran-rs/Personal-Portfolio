@@ -1,12 +1,23 @@
-<section class="projects">
-    <h2>My Projects</h2>
+<section id="projects" class="projects section-animate">
+    <h2>Featured <span>Projects</span></h2>
+    <p>A Section to showcase my works and Contribution</p>
     <div class="project-grid">
         @if (projects$ | async; as projects) {
-            @for (pro of projects; track pro.name) {
+            @for (pro of (showAll ? projects : projects.slice(0,3)); track pro.name) {
                 <app-project-card [project]="pro"></app-project-card>
             }
+            <div class="buttons">
+                <button class="btn-view btn-animate hover-lift" (click)="(toggleView())">
+                    {{ showAll ? 'View Less': 'View More' }}
+                </button>
+                @if(showAll){
+                    <a href="https://www.github.com/sarweshwaran-rs" target="_blank" class="btn-github">
+                        <img src="assets/images/github.svg" alt="github-logo" />View GitHub
+                    </a>
+                }
+            </div>
         } @else {
-            <p>Loading projects...</p>
+            <mat-spinner mode="indeterminate" diameter="50"></mat-spinner>
         }
     </div>
 </section>

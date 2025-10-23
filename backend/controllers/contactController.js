@@ -5,7 +5,7 @@ exports.submitContact = async (req, res) => {
     try {
         const { personname, email, linkedinurl } = req.body;
 
-        if (!personname || !email || !linkedinurl) {
+        if (!personname || !email) {
             return res.status(400).json({ error: "All fields are required" });
         }
 

@@ -1,29 +1,40 @@
-<section class="hero">
-  <div class="hero-left">
-    <img src="/assets/images/profile.png" alt="Sarweshwaran R S" class="profile-img" />
+<section id="hero" class="hero section-animate">
+  <div class="hero-left animate-fade-in-left">
+    <img src="/assets/images/profile.png" alt="Sarweshwaran R S" class="profile-img hover-scale" draggable="false" />
   </div>
-  <div class="hero-right">
-    <h1>Hi, I'm <span class="highlight">Sarweshwaran R S</span></h1>
-    <h3>Backend & Full-Stack Development | AI & Cloud Enthusiast</h3>
-    <p>
+
+  <div class="hero-right animate-fade-in-right animate-stagger-2">
+    <h1 class="animate-fade-in-up">
+      Hi, I'm <span class="highlight text-shimmer">Sarweshwaran R S</span>
+    </h1>
+
+    <h3 class="animated-role animate-fade-in-up animate-stagger-1">
+      &gt; <span id="role-text"></span>
+    </h3>
+
+    <p class="animate-fade-in-up animate-stagger-2">
       I’m a final-year Integrated M.Tech Software Engineering student at VIT,
       passionate about building scalable backends, interactive frontends, and
       intelligent AI-powered solutions.
     </p>
-    <div class="social-links">
-      <a href="https://github.com/sarweshwaran-rs" target="_blank">
+
+    <div class="social-links animate-fade-in-up animate-stagger-3">
+      <a href="https://github.com/sarweshwaran-rs" target="_blank" class="hover-lift">
         <img src="./assets/images/github.svg" alt="github-logo" height="32" width="32" />
       </a>
-      <a href="https://linkedin.com/in/sarweshwaranrs" target="_blank">
+      <a href="https://linkedin.com/in/sarweshwaranrs" target="_blank" class="hover-lift">
         <img src="./assets/images/linkedin.svg" alt="linkedin-logo" height="32" width="32" />
       </a>
-      <a href="mailto:sarweshwaranrs.dev@gmail.com">
+      <a href="mailto:sarweshwaranrs.dev@gmail.com" class="hover-lift">
         <img src="./assets/images/email.svg" alt="mail-logo" height="32" width="32" />
       </a>
     </div>
-    <div class="hero-buttons">
-      <button class="btn-primary">View My Work</button>
-      <button class="btn-secondary" (click)="scrollToSection('contactFrom')">Get In Touch</button>
+
+    <div class="hero-buttons animate-fade-in-up animate-stagger-4">
+      <button class="btn-primary btn-animate hover-lift" (click)="scrollToSection('projects')">View My Work</button>
+      <button class="btn-secondary btn-animate hover-lift" (click)="scrollToSection('contact')">
+        Get In Touch
+      </button>
     </div>
   </div>
 </section>

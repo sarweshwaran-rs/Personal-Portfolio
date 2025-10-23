@@ -31,7 +31,16 @@ const PINNED_REPOS_QUERY = gql`
                                 url
                             }
                             viewerPermission   # ADMIN, WRITE, READ, NONE
-                            viewerHasStarred
+                            viewerHasStarred,
+                            repositoryTopics(first: 5) {
+                                edges {
+                                    node {
+                                        topic {
+                                            name
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -58,6 +67,11 @@ async function getPinnedRepos() {
             contributionStatus = "Contributed";
         }
 
+        // Extract topic names into a flat array
+        const topics = repo.repositoryTopics.edges.map(
+            (topicEdge) => topicEdge.node.topic.name
+        );
+
         return {
             name: repo.name,
             description: repo.description,
@@ -69,7 +83,8 @@ async function getPinnedRepos() {
             ownerUrl: repo.owner.url,
             viewerPermission: repo.viewerPermission,
             viewerHasStarred: repo.viewerHasStarred,
-            contributionStatus, 
+            contributionStatus,
+            topics
         };
     });
 }

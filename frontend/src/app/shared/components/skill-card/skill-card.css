@@ -1,22 +1,82 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter.ttc'),
+   url('/assets/fonts/InterVariable.ttf'),
+   url('/assets/fonts/InterVariable-Italic.ttf');
+}
+
 .skill-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 10px;
-  margin: 8px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  margin: 0px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
   width: 100px;
+  height: 100px;
   text-align: center;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
 .skill-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
   cursor: pointer;
 }
 
 .skill-card img {
-  margin-bottom: 6px;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.skill-card a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  font-family: 'Inte', sans-serif;
+  font-size: 0.95rem;
+}
+
+.skill-card a:hover p {
+  color: #4b8bd0;
+}
+
+/* Responsive card scaling */
+@media (max-width: 768px) {
+  .skill-card {
+    width: 100px;
+    height: 110px;
+    padding: 12px;
+  }
+
+  .skill-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-card a {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-card {
+    width: 90px;
+    height: 100px;
+    margin: 6px;
+  }
+
+  .skill-card img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .skill-card a {
+    font-size: 0.8rem;
+  }
 }

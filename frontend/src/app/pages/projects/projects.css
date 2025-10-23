@@ -1,9 +1,144 @@
+@font-face {
+  font-family: 'Inter';
+  src:url('/assets/fonts/Inter.ttc'),
+      url('/assets/fonts/InterVariable.ttf'),
+      url('/assets/fonts/InterVariable-Italic.ttf');
+}
+
+app-project-card {
+  flex: 1 1 calc(100% - 20px);
+  max-width: 400px;
+  margin: 10px;
+  width: auto;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 0px;
+}
+
+.btn-view, 
+.btn-github {
+  background-color: #4B88D0;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter',sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  vertical-align: middle;
+}
+
+.btn-github img{
+  vertical-align: middle;
+}
+
+.btn-view:hover,
+.btn-github:hover {
+  background-color: #357ac8;
+  transform: scale(1.05);
+}
+
+
+a {
+  text-decoration: none;
+}
+
 .projects {
-  padding: 40px 20px;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 20px 20px;
+  margin-bottom: 0px;
+  padding-bottom: 0;
+  background: linear-gradient(
+    140deg,
+    #e8f4ff 0%,
+    #f8fbff 20%,
+    #ffffff 40%,
+    #f0f8ff 60%,
+    #e8f4ff 80%,
+    #f5f9ff 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(75, 136, 208, 0.09);
+}
+
+.projects h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  font-display: auto;
+  font-variant: normal;
+}
+
+.projects p {
+  width: 100%;
+  font-size: 16px;
+  height: auto;
+  text-align: center;
+}
+
+.projects span {
+  color: #4B88D0;
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 599px) {
+  .project-grid {
+    padding: 0 10px;
+    gap: 15px;
+  }
+  
+  app-project-card {
+    flex: 1 1 100%;
+    max-width: calc(100% - 20px);
+    margin: 0 10px 15px 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  app-project-card {
+    flex: 1 1 calc(50% - 20px); 
+    max-width: 450px;
+    margin: 10px;
+  }
+
+  .project-grid {
+    gap: 40px 20px; 
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  app-project-card {
+    flex: 1 1 calc(33.33% - 20px); 
+    max-width: 400px;
+    margin: 10px;
+  }
+
+  .project-grid {
+    gap: 40px 20px; 
+  }
 }

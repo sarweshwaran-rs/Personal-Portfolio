@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/Inter.ttc'),url('/assets/fonts/InterVariable.ttf'), url('/assets/fonts/InterVariable-Italic.ttf');
+}
+
+.education-card {
+    margin: 15px 0px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    display: flex;
+    max-width: 600px;
+}
+
+.education-card img {
+    position: relative;
+    top: 25px;
+    left: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    width: 100px;
+    height: 100px;
+    -webkit-user-drag: none;
+    user-select: none;
+    padding: 15px 10px;
+    vertical-align: middle;
+}
+
+.education-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: 'Inter';
+    font-size: 15px;
+    text-align: left;
+    padding: 15px 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.name {
+    top: 20px;
+    padding-top: 8px;
+    color: #0000FF;
+    width: max-content;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.institute {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0px;
+    line-height: 1.4rem;
+    margin: 0;
+    font-size: 14px;
+}
+
+.duration {
+    margin-left: 8px;
+    border-radius: 20px;
+    padding: 6px 10px;
+    background-color: #848DF4;
+    color: #3D18DF;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 12px;
+}
+
+.grade {
+    flex: 1;
+    vertical-align: middle;
+    margin: 0;
+    padding: 6px 0px;
+    font-size: 14px;
+}
+
+.div-class {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 0px; 
+    padding: 6px 0px;
+    font-size: 14px;
+}
+
+.status {
+    border-radius: 20px;
+    padding: 6px 10px;
+    align-self: flex-end;
+    background-color: rgba(11, 254, 80, 0.25);
+    color: #1E962A;
+    margin-left: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 12px;
+}
+
+/* ----------- Responsive Design for Education Card ----------- */
+
+/* Tablets and medium screens */
+@media (max-width: 1024px) {
+    .education-card {
+        flex-direction: row;
+        align-items: center;
+        padding: 8px;
+        max-width: 500px;
+    }
+
+    .education-card img {
+        width: 80px;
+        height: 80px;
+        top: 15px;
+        left: 15px;
+        padding: 12px;
+    }
+
+    .education-details {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .name {
+        font-size: 13px;
+    }
+
+    .institute, .div-class, .grade {
+        font-size: 13px;
+    }
+
+    .duration,
+    .status {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .education-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        max-width: 400px;
+    }
+
+    .education-card img {
+        position: static;
+        width: 70px;
+        height: 70px;
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+
+    .education-details {
+        align-items: center;
+        padding: 0;
+        font-size: 13px;
+    }
+
+    .institute, .div-class {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .duration, .status {
+        margin-left: 0;
+        font-size: 11px;
+        padding: 5px 8px;
+        align-self: center;
+        text-align: center;
+    }
+
+    .name {
+        font-size: 13px;
+    }
+
+    .grade {
+        font-size: 13px;
+    }
+}
+
+/* Very small mobile screens */
+@media (max-width: 480px) {
+    .education-card {
+        padding: 12px;
+        max-width: 350px;
+    }
+
+    .education-card img {
+        width: 60px;
+        height: 60px;
+        padding: 6px;
+    }
+
+    .education-details {
+        font-size: 12px;
+        gap: 3px;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+
+    .institute, .div-class, .grade {
+        font-size: 12px;
+    }
+
+    .duration, .status {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+}

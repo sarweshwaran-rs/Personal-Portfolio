@@ -12,31 +12,31 @@ import { CommonModule } from '@angular/common';
 export class Education {
   educations = [
     {
-      education: "School",
-      grade: "92%",
-      class: "VI to X",
-      name: "Seventh Day Adventist Matrication Higher Secondary School",
-      logo: "/assets/images/sda-school-logo.jpg",
-      duration: "2014-2019",
-      status:  "Completed"    
-    },
-    {
-      education: "School",
-      grade: "89.8%",
-      class: "XI to XII",
-      name: "Lakshmi Garden Maticulation Higher Secondary School",
-      logo: "/assets/images/lgms-school-logo.png",
-      duration: "2019-2021",
-      status: "Completed"     
-    },
-    {
-      education: "PG",
-      grade: "8.31",
+      education: "Integrated PG",
+      grade: "8.31 CGPA",
       class: "M.Tech (Software Engineering)",
       name: "Vellore Institute of Technology",
       logo: "/assets/images/vit-logo.jpg",
       duration: "2021-2026",
       status: "Final Year" 
+    },
+    {
+      education: "Higher Secondary Certificate",
+      grade: "89.8%",
+      class: "XIIth-std",
+      name: "Lakshmi Garden Maticulation Higher Secondary School",
+      logo: "/assets/images/lgms-school-logo.png",
+      duration: "2020-2021",
+      status: "Completed"     
+    },
+    {
+      education: "Secondary School Certificate",
+      grade: "92%",
+      class: "Xth-std",
+      name: "Seventh Day Adventist Matrication Higher Secondary School",
+      logo: "/assets/images/sda-vellore.png",
+      duration: "2018-2019",
+      status:  "Completed"    
     }
   ];
 }

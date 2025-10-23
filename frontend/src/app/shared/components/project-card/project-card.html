@@ -1,24 +1,30 @@
-<mat-card class="project-card"
-    [ngStyle]="{ transform: transformStyle }"
-    (mousemove)="onMouseMove($event)"
-    (mouseleave)="resetTransform()"
->
-    <mat-card-header>
-        <mat-card-title>{{ project.name }}</mat-card-title>
-        @if (project.contributionStatus === 'Contributed') {
-            <span class="contributed-badge">Contributed</span>
-        }
-    </mat-card-header>
+<div class="project-card card-animate" (mousemove)="onMouseMove($event)" (mouseleave)="resetTransform()" [style.transform]="transformStyle">
+  <div class="card-top">
+    <div class="card-header">
+      <h5>{{ project.name }}</h5>
+      <a [href]="project.url" target="_blank">
+        <img src="assets/images/external-link.svg" alt="link" />
+      </a>
+    </div>
+    <p>{{ project.description  || 'No Description Available'}}</p>
+  </div>
 
-    <mat-card-content>
-        <p class="description">
-            {{ project.description || 'No description available'}}
-        </p>
-    </mat-card-content>
+  <div class="card-bottom">
+    <div class="stats">
+      <img src="assets/images/github-star.svg" alt="stars" />
+      <span>{{project.stars}}</span>
+      <img src="assets/images/git-fork.svg" alt="forks" />
+      <span>{{project.forks}}</span>
+    </div>
 
-    <mat-card-actions>
-        <a [href]="project.url" target="_blank" rel="noopener noreferrer" class="repo-link">
-            <mat-icon>open_in_new</mat-icon>
-        </a>
-    </mat-card-actions>
-</mat-card>
+    @if(project.contributionStatus === 'Contributed')
+    {
+      <span class="badge contributed">Contributed</span>
+    }
+    @else 
+    {
+      <span class="badge owned">Owned</span>
+    }
+  </div>
+  
+</div>

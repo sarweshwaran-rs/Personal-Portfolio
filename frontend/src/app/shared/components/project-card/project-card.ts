@@ -1,6 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 
 export interface Project {
@@ -20,7 +18,7 @@ export interface Project {
 @Component({
   selector: 'app-project-card',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatIconModule],
+  imports: [CommonModule],
   templateUrl: './project-card.html',
   styleUrls: ['./project-card.css']
 })

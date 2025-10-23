@@ -1,0 +1,36 @@
+<section id="contact" class="connect-section section-animate">
+  <div class="connect-container">
+    <h2 class="intro">Let's <span>Connect</span></h2>
+    <p class="description">
+      Looking for collaboration, freelance work, or just want to chat about tech and ideas?
+    </p>
+    <p class="subtext">
+      Drop me a message - I'll get back to you soon.
+    </p>
+
+    <div class="contact-form card-animate">
+      <form id="contactForm" [formGroup]="portfolioForm" (ngSubmit)="onSubmit()">
+        <label for="personname">Name</label>
+        <input id="personname" type="text" placeholder="John Doe" formControlName="personname" name="personname" required
+          autocomplete="off" />
+        @if(portfolioForm.controls.personname.invalid && portfolioForm.controls.personname.touched) {
+        <div><small>Name is required</small></div>
+        }
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="johndoe@gmail.com" formControlName="email" name="email" required
+          autocomplete="off" />
+        @if(portfolioForm.controls.email.invalid && portfolioForm.controls.email.touched) {
+        <div><small>Enter a valid email</small></div>
+        }
+
+        <label for="linkedinurl">LinkedIn Url</label>
+        <input id="linkedinurl" type="text" placeholder="https://www.linkedin.com/in/johndoe" formControlName="linkedinurl"
+          name="linkedinurl" autocomplete="off" />
+        <button type="submit" title="Submit Details" [disabled]="portfolioForm.invalid">
+          Submit Details
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
