@@ -23,20 +23,11 @@ export class Education {
     {
       education: "Higher Secondary Certificate",
       grade: "89.8%",
-      class: "XIIth-std",
+      class: "XIIth-Grade",
       name: "Lakshmi Garden Maticulation Higher Secondary School",
       logo: "/assets/images/lgms-school-logo.png",
       duration: "2020-2021",
       status: "Completed"     
-    },
-    {
-      education: "Secondary School Certificate",
-      grade: "92%",
-      class: "Xth-std",
-      name: "Seventh Day Adventist Matrication Higher Secondary School",
-      logo: "/assets/images/sda-vellore.png",
-      duration: "2018-2019",
-      status:  "Completed"    
     }
   ];
 }

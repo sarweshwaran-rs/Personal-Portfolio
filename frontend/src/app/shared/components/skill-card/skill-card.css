@@ -64,6 +64,59 @@
   }
 }
 
+/* Medium mobile screens - 415px to 760px */
+@media (max-width: 760px) and (min-width: 415px) {
+  .skill-card {
+    width: 95px;
+    height: 105px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .skill-card img {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 6px;
+  }
+
+  .skill-card a {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .skill-card p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Small mobile screens - 415px and below */
+@media (max-width: 415px) {
+  .skill-card {
+    width: 85px;
+    height: 95px;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 4px;
+  }
+
+  .skill-card img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+  }
+
+  .skill-card a {
+    font-size: 0.75rem;
+    line-height: 1.1;
+  }
+
+  .skill-card p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 @media (max-width: 480px) {
   .skill-card {
     width: 90px;
