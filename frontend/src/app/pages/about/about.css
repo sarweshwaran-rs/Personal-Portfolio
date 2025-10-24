@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 20px 80px;
+  padding: 150px 20px 80px;
   gap: 80px;
   flex-wrap: wrap;
   text-align: left;
@@ -240,7 +240,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
-    padding: 80px 15px 60px;
+    padding: 100px 15px 60px;
     gap: 40px;
     text-align: center;
   }
@@ -268,7 +268,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 60px 10px 40px;
+    padding: 80px 10px 40px;
   }
   
   .hero-left .profile-img {
