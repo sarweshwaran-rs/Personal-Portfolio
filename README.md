@@ -2,11 +2,6 @@
 
 A modern, responsive portfolio website showcasing my journey as a Software Engineer and AI Researcher. Built with Angular and Node.js, featuring a clean design, smooth animations, and full-width gradient backgrounds.
 
-![Portfolio Preview](https://img.shields.io/badge/Status-Live-brightgreen)
-![Angular](https://img.shields.io/badge/Angular-20.3.0-red)
-![Node.js](https://img.shields.io/badge/Node.js-Express-green)
-![Firebase](https://img.shields.io/badge/Deployed-Firebase-orange)
-
 ## ✨ Features
 
 ### 🎨 Design & UI
