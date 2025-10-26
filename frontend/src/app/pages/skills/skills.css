@@ -5,14 +5,20 @@
        url("/assets/fonts/InterVariable-Italic.ttf");
 }
 
-.skills-section {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  padding: 40px 5%;
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
+.skills-wrapper {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 20px 0;
+}
+
+.skills-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(
     150deg,
     #f0f8ff 0%,
@@ -20,8 +26,22 @@
     #e8f4ff 60%,
     #f8fbff 100%
   );
+  z-index: -1;
+}
+
+.skills-section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 5%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(75, 136, 208, 0.12);
+  position: relative;
+  z-index: 1;
 }
 
 .skills-section h2 {
@@ -82,6 +102,74 @@
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 12px;
+  }
+}
+
+/* Medium mobile screens - 415px to 760px */
+@media (max-width: 760px) and (min-width: 415px) {
+  .skills-section {
+    padding: 30px 4%;
+  }
+
+  .skills-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .skills-section p {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .group-title {
+    font-size: 1rem;
+    margin-left: 8px;
+    margin-bottom: 12px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    padding: 0 10px;
+  }
+
+  .skills-group {
+    margin-bottom: 35px;
+  }
+}
+
+/* Small mobile screens - 415px and below */
+@media (max-width: 415px) {
+  .skills-section {
+    padding: 20px 3%;
+  }
+
+  .skills-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+
+  .skills-section p {
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+    line-height: 1.4;
+  }
+
+  .group-title {
+    font-size: 0.9rem;
+    margin-left: 5px;
+    margin-bottom: 10px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+    gap: 8px;
+    padding: 0 5px;
+  }
+
+  .skills-group {
+    margin-bottom: 30px;
   }
 }
 

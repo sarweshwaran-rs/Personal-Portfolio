@@ -761,6 +761,189 @@
     }
 }
 
+/* Very small screens - 408px and below */
+@media (max-width: 408px) {
+    .publications-section {
+        padding: 12px;
+        margin: 0;
+    }
+
+    .publications-section h2 {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .publications-section p {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .publication-card {
+        width: 100%;
+        margin: 8px auto;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .publication-header {
+        height: 120px;
+        min-height: 120px;
+        max-height: 120px;
+        overflow: hidden;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .publication-header img {
+        height: 120px;
+        min-height: 120px;
+        object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .publication-header .chip {
+        font-size: 9px;
+        padding: 2px 6px;
+        margin: 2px;
+    }
+
+    .publication-header .chapter-title {
+        font-size: 10px;
+        left: 8px;
+        bottom: 8px;
+        max-width: calc(100% - 16px);
+        line-height: 1.2;
+    }
+
+    .publication-header h4 {
+        width: 100%;
+        margin-left: 0;
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+
+    .publication-card-content-left {
+        padding: 10px;
+        padding-bottom: 4px;
+    }
+
+    .publication-card-content-left h2 {
+        font-size: 13px;
+        margin-bottom: 6px;
+        margin-top: 4px;
+    }
+
+    .publication-card-content-right h2 {
+        font-size: 13px;
+        padding-top: 0 !important;
+        margin-top: 0;
+        margin-bottom: 4px;
+    }
+
+    .publication-card-content-left p {
+        font-size: 11px;
+        padding-left: 0;
+        line-height: 1.3;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .publication-card-content-left > .p-achi {
+        padding: 6px 4px;
+    }
+
+    .achi {
+        font-size: 10px;
+        padding: 6px 8px;
+        margin-bottom: 4px;
+        border-radius: 15px;
+    }
+
+    .tech-container {
+        padding-left: 0;
+        gap: 4px;
+        margin-top: 4px;
+        margin-bottom: 0;
+    }
+
+    .tech-used {
+        font-size: 10px;
+        padding: 4px 8px;
+        margin-bottom: 4px;
+        border-radius: 20px;
+    }
+
+    .publication-card-content-right {
+        padding: 10px;
+        padding-top: 6px;
+        gap: 4px;
+    }
+
+    .publication-card-content-right p {
+        font-size: 11px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        line-height: 1.3;
+    }
+
+    .button-group {
+        flex-direction: column;
+        padding-top: 6px;
+        gap: 6px;
+        margin-top: 4px;
+    }
+
+    .read-book {
+        width: 100%;
+        max-width: 100%;
+        min-width: auto;
+        padding: 8px 12px;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .read-book img {
+        width: 12px;
+        height: 12px;
+        margin-right: 4px;
+    }
+
+    .read-book span a {
+        font-size: 11px;
+    }
+
+    .profile-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 8px 10px;
+        margin: 8px auto;
+        gap: 10px;
+        border-radius: 20px;
+    }
+
+    .profile-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile-header h4 {
+        font-size: 0.8rem;
+    }
+
+    .profile-content p {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
+
+    .profile-header a img {
+        width: 14px;
+        height: 14px;
+    }
+}
+
 /* Extra small screens */
 @media (max-width: 360px) {
     .publications-section {
