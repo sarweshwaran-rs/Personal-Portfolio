@@ -12,8 +12,8 @@ const SCOPES = [
 
 // Fetch and store token from files
 
-const TOKEN_PATH = path.join(process.cwd(), './credentials/token.json');
-const CREDENTIALS_PATH = path.join(process.cwd(), './credentials/credentials.json');
+const TOKEN_PATH = path.join(process.cwd(), './token.json');
+const CREDENTIALS_PATH = path.join(process.cwd(), './credentials.json');
 
 async function loadToken() {
     try {
