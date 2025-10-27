@@ -13,15 +13,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const allowedOrigins = [
-    'http://localhost:4200',
-    'http://192.168.1.39:4200',
-    'http://192.168.1.21:4200',
-    'http://192.168.0.3:4200',
-    'http://192.168.0.4:4200',
-    'http://192.168.1.23:4200',
-    "http://192.168.75.254:4200",
-    "http://192.168.1.41:4200",
-    "http://192.168.1.42:4200",
+    "https://portfolio-091003.web.app"
 ];
 
 app.use(cors({
