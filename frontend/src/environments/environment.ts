@@ -1,5 +1,5 @@
 const host = window.location.hostname;
 export const environment = {
     production: false,
-    baseApi: `http://${host}:3000/api`
+    baseApi: `https://personal-portfolio-izlm.onrender.com/api`
 };
