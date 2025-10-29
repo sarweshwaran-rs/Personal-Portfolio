@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const allowedOrigins = [
-    "https://portfolio-091003.web.app"
+    "https://portfolio-091003.web.app",
+    "https://api.sarweshwaranrs.ddnsfree.com",
 ];
 
 app.use(cors({
