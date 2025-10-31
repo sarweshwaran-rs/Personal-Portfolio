@@ -35,9 +35,9 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
     res.status(200).send("Portfolio Server Running Successfully!");
 });
-app.use('/api/contact', contactRoute);
+app.use('/contact', contactRoute);
 
-app.get("/api/github/pinned", async (req, res) => {
+app.get("/github/pinned", async (req, res) => {
     try {
         const repos = await getPinnedRepos();
         res.json(repos);
