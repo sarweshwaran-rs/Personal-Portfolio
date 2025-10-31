@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const allowedOrigins = [
-    "https://portfolio-091003.web.app"
+    "http:localhost:4200",
+    "https://www.sarweshwaranrs.me",
 ];
 
 app.use(cors({
@@ -34,9 +35,9 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
     res.status(200).send("Portfolio Server Running Successfully!");
 });
-app.use('/api/contact', contactRoute);
+app.use('/contact', contactRoute);
 
-app.get("/api/github/pinned", async (req, res) => {
+app.get("/github/pinned", async (req, res) => {
     try {
         const repos = await getPinnedRepos();
         res.json(repos);

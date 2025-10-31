@@ -1,5 +1,5 @@
 const host = window.location.hostname;
 export const environment = {
     production:false,
-    baseApi:`https://api.sarweshwaranrs.ddnsfree.com/api`,
+    baseApi:`https://api.sarweshwaranrs.me`,
 };
