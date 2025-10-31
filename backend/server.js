@@ -14,6 +14,8 @@ const app = express();
 
 const allowedOrigins = [
     "http:localhost:4200",
+    "https://portfolio-091003.web.app",
+    "https://portfolio-091003.firebaseapp.com",
     "https://www.sarweshwaranrs.me",
     "https://sarweshwaranrs.me",
 ];
