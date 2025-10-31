@@ -15,6 +15,7 @@ const app = express();
 const allowedOrigins = [
     "http:localhost:4200",
     "https://www.sarweshwaranrs.me",
+    "https://sarweshwaranrs.me",
 ];
 
 app.use(cors({
