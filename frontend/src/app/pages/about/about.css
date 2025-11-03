@@ -240,7 +240,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
-    padding: 100px 15px 60px;
+    padding: 100px 20px 60px;
     gap: 40px;
     text-align: center;
   }
@@ -268,7 +268,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 80px 10px 40px;
+    padding: 80px 20px 40px;
   }
   
   .hero-left .profile-img {
@@ -288,5 +288,66 @@
   
   .btn-primary {
     margin-right: 0;
+  }
+}
+
+/* Fix for very small screens (264px - 320px) */
+@media (max-width: 320px) {
+  .hero {
+    padding: 70px 16px 35px;
+    gap: 30px;
+  }
+  
+  .hero-left .profile-img {
+    width: 160px;
+    height: 160px;
+    border: 4px solid #007bff;
+  }
+  
+  .hero-right h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .animated-role {
+    font-size: 1.1rem;
+    min-height: 35px;
+  }
+  
+  .hero-right p {
+    font-size: 1rem;
+    margin: 15px 0;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    margin-right: 15px;
+  }
+  
+  .hero-buttons {
+    margin-top: 30px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+}
+
+/* Specific fix for 264px - 375px range */
+@media (min-width: 264px) and (max-width: 375px) {
+  .hero {
+    padding: 75px 18px 38px;
+    gap: 32px;
+  }
+  
+  .hero-left .profile-img {
+    width: 170px;
+    height: 170px;
   }
 }
